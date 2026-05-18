@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "京东订单本地导出",
+  "version": "0.1.19",
+  "description": "在京东订单页本地抓取并导出订单 CSV/Excel，可选打包保存商品图片，数据不上传。如果要导出图片，建议一年一年导出，不然容易触发京东验证",
+  "action": {
+    "default_title": "京东订单本地导出",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://order.jd.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://order.jd.com/*",
+    "https://*.360buyimg.com/*",
+    "https://*.jdimg.com/*"
+  ]
+}

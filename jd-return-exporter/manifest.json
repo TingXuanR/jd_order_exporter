@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "京东售后记录本地导出",
+  "description": "在本地导出京东返修/退换货记录，并从详情页识别是否出现“已退款”。",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://myjd.jd.com/afs/list/allRepairs.action*",
+        "https://myjd.jd.com/afs/*",
+        "https://myjd.jd.com/repair/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://myjd.jd.com/*"
+  ]
+}

@@ -1,0 +1,202 @@
+.jd-exporter-root,
+.jd-exporter-root * {
+  box-sizing: border-box;
+}
+
+.jd-exporter-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2147483647;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #d71920, #ff7a45);
+  box-shadow: 0 14px 34px rgba(190, 20, 24, 0.3);
+  cursor: pointer;
+  font: 700 13px/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.jd-exporter-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 94px;
+  z-index: 2147483647;
+  width: min(430px, calc(100vw - 32px));
+  max-height: min(760px, calc(100vh - 120px));
+  overflow: auto;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 18px;
+  color: #172033;
+  background: #fff;
+  box-shadow: 0 24px 80px rgba(18, 28, 45, 0.24);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.jd-exporter-hidden {
+  display: none;
+}
+
+.jd-exporter-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.jd-exporter-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.jd-exporter-subtitle {
+  margin: 6px 0 0;
+  color: #687386;
+  font-size: 12px;
+}
+
+.jd-exporter-close {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 999px;
+  color: #687386;
+  background: #f2f4f8;
+  cursor: pointer;
+}
+
+.jd-exporter-body {
+  padding: 18px 20px 20px;
+}
+
+.jd-exporter-field {
+  margin: 0 0 14px;
+}
+
+.jd-exporter-field label {
+  display: block;
+  margin: 0 0 7px;
+  color: #4d5a6d;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.jd-exporter-input,
+.jd-exporter-select {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #dbe1ea;
+  border-radius: 10px;
+  padding: 0 11px;
+  color: #172033;
+  background: #fff;
+  outline: none;
+}
+
+.jd-exporter-input:focus,
+.jd-exporter-select:focus {
+  border-color: #e2231a;
+  box-shadow: 0 0 0 3px rgba(226, 35, 26, 0.12);
+}
+
+.jd-exporter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.jd-exporter-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 14px;
+  color: #4d5a6d;
+}
+
+.jd-exporter-check input {
+  width: 16px;
+  height: 16px;
+}
+
+.jd-exporter-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.jd-exporter-button {
+  flex: 1;
+  height: 40px;
+  border: 0;
+  border-radius: 11px;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.jd-exporter-button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #d71920, #ff6a3d);
+}
+
+.jd-exporter-button-secondary {
+  color: #233044;
+  background: #eef1f7;
+}
+
+.jd-exporter-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.jd-exporter-progress {
+  height: 9px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eef1f7;
+}
+
+.jd-exporter-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #e2231a, #ffb000);
+  transition: width 180ms ease;
+}
+
+.jd-exporter-log {
+  min-height: 74px;
+  max-height: 160px;
+  margin-top: 12px;
+  overflow: auto;
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+  padding: 10px;
+  color: #526071;
+  background: #fbfcfe;
+  font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.jd-exporter-note {
+  margin: 12px 0 0;
+  color: #8a95a6;
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  .jd-exporter-panel {
+    right: 12px;
+    bottom: 82px;
+  }
+
+  .jd-exporter-fab {
+    right: 12px;
+    bottom: 12px;
+  }
+}
